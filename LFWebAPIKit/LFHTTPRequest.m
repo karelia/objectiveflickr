@@ -771,6 +771,9 @@ void LFHRReadStreamClientCallBack(CFReadStreamRef stream, CFStreamEventType even
         case kCFStreamEventErrorOccurred:
             [request readStreamErrorOccurred];
             break;
+		case kCFStreamEventNone:
+		case kCFStreamEventOpenCompleted:
+		case kCFStreamEventCanAcceptBytes:
         default:
             break;
     }
